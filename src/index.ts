@@ -1,6 +1,6 @@
-export function sayHi(msg: string) {
-  console.log(msg);
-}
+import {createRoot} from 'react-dom/client'
+import {Application} from './app'
 
-sayHi('hello');
-
+const container = document.querySelector('#root') as Element
+const root = createRoot(container)
+root.render(Application())

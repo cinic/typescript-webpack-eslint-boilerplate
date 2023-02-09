@@ -1,11 +1,12 @@
 module.exports = {
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'standard',
-    'stylelint-config-prettier',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+    'plugin:import/recommended',
   ],
   plugins: ['@typescript-eslint'],
   parser: '@typescript-eslint/parser',
@@ -19,9 +20,13 @@ module.exports = {
   settings: {
     'import/resolver': {
       typescript: {},
+      node: {},
     },
     react: {
       version: 'detect',
     },
   },
-};
+  rules: {
+    // semi: ['error', 'never'],
+  },
+}

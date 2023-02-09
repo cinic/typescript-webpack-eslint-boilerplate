@@ -4,5 +4,7 @@
   "singleQuote": true,
   "max-len": ["error", 100, 2],
   "arrowParens": "always",
-  "trailingComma": "all"
+  "trailingComma": "all",
+  "bracketSpacing": false,
+  "semi": false
 }
