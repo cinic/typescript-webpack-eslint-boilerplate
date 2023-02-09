@@ -1,0 +1,17 @@
+@import './variables.css';
+@import './theme.dark.css';
+@import './theme.light.css';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  font: var(--font-m);
+  background: var(--color-background);
+  color: var(--color-primary);
+
+  min-height: 100vh;
+}

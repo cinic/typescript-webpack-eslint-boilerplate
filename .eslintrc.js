@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const path = require('path')
+
 module.exports = {
   extends: [
     'eslint:recommended',
@@ -8,9 +11,11 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:import/recommended',
   ],
-  plugins: ['@typescript-eslint'],
+  plugins: ['react', 'react-hooks', '@typescript-eslint'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    project: ['./tsconfig.json', './tsconfig.eslint.json'],
+    sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
       experimentalObjectRestSpread: true,
@@ -20,7 +25,16 @@ module.exports = {
   settings: {
     'import/resolver': {
       typescript: {},
-      node: {},
+      alias: {
+        map: [
+          ['@lib', path.resolve(__dirname, 'src', 'shared', 'lib')],
+          ['@ui', path.resolve(__dirname, 'src', 'shared', 'ui')],
+          ['@entities', path.resolve(__dirname, 'src', 'entities')],
+          ['@features', path.resolve(__dirname, 'src', 'features')],
+          ['@widgets', path.resolve(__dirname, 'src', 'widgets')],
+        ],
+        extensions: ['.ts', '.js', '.tsx', '.json'],
+      },
     },
     react: {
       version: 'detect',
@@ -29,4 +43,5 @@ module.exports = {
   rules: {
     // semi: ['error', 'never'],
   },
+  ignorePatterns: ['**/*.d.ts'],
 }

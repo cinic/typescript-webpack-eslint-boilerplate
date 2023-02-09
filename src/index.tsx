@@ -3,4 +3,4 @@ import {Application} from './app'
 
 const container = document.querySelector('#root') as Element
 const root = createRoot(container)
-root.render(Application())
+root.render(<Application />)
