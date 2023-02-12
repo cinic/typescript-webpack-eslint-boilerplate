@@ -1,7 +1,7 @@
 import {useTranslation} from '@shared/lib/i18n'
 
 export const MainPage = () => {
-  const {t} = useTranslation('main-page')
+  const {t} = useTranslation('main')
 
   return <div>{t('title')}</div>
 }

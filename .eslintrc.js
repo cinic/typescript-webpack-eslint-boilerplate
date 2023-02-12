@@ -4,7 +4,7 @@ const path = require('path')
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es6: true,
   },
   extends: [
     'eslint:recommended',
@@ -14,8 +14,9 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     'plugin:import/recommended',
+    'plugin:i18next/recommended',
   ],
-  plugins: ['react', 'react-hooks', '@typescript-eslint', 'simple-import-sort'],
+  plugins: ['react', 'react-hooks', '@typescript-eslint', 'simple-import-sort', 'i18next'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: ['./tsconfig.json', './tsconfig.eslint.json'],
@@ -56,7 +57,7 @@ module.exports = {
             '^react',
             '^@?\\w',
             // Internal packages.
-            '^(@|@company|@ui|components|utils|config|vendored-lib)(/.*|$)',
+            '^(@|@ui|components|utils|config|vendored-lib)(/.*|$)',
             // Side effect imports.
             '^\\u0000',
             // Parent imports. Put `..` last.
@@ -81,6 +82,7 @@ module.exports = {
     ],
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error', {argsIgnorePattern: '^_'}],
+    'i18next/no-literal-string': ['error', {mode: 'jsx-text-only'}],
   },
   ignorePatterns: ['**/*.d.ts'],
 }

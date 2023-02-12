@@ -1,13 +1,12 @@
-@import './variables.css';
-@import './reset.css';
-@import './theme.dark.css';
-@import './theme.light.css';
+@import url('./variables.css');
+@import url('./reset.css');
+@import url('./theme.dark.css');
+@import url('./theme.light.css');
 
 .app {
   font: var(--font-m);
   background: var(--color-background);
   color: var(--color-primary);
-
   min-height: 100vh;
 }
 

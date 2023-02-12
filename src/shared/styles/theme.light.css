@@ -1,8 +1,8 @@
 [data-theme='light'] {
-  --color-background: #ffffff;
+  --color-background: #fff;
   --color-background-inverted: #052640;
   --color-primary: #244165;
-  --color-secondary: #1367C5;
-  --color-primary-inverted: #ffffff;
-  --color-secondary-inverted: #97AABA;
+  --color-secondary: #1367c5;
+  --color-primary-inverted: #fff;
+  --color-secondary-inverted: #97aaba;
 }

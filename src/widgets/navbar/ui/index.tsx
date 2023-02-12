@@ -9,8 +9,8 @@ export const Navbar = ({className = ''}: {className?: string}) => {
   return (
     <div className={classNames([styles.navbar, className])}>
       <nav className={styles.links}>
-        <AppLink to="/">{t('main-page:menuLabel')}</AppLink>
-        <AppLink to="/about">{t('about-page:menuLabel')}</AppLink>
+        <AppLink to="/">{t('menu.main')}</AppLink>
+        <AppLink to="/about">{t('menu.about')}</AppLink>
       </nav>
     </div>
   )

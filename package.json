@@ -9,7 +9,11 @@
   "scripts": {
     "start": "webpack serve --env port=3001",
     "build:prod": "webpack --env mode=production",
-    "build:dev": "webpack --env mode=development"
+    "build:dev": "webpack --env mode=development",
+    "lint": "eslint --ext .js,.ts,.tsx ./src",
+    "lint:fix": "eslint --fix --ext .js,.ts,.tsx ./src",
+    "stylelint": "npx stylelint \"src/**/*.css\"",
+    "stylelint:fix": "stylelint --fix \"src/**/*.css\""
   },
   "devDependencies": {
     "@babel/cli": "^7.20.7",
@@ -32,6 +36,7 @@
     "eslint-config-standard": "^17.0.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-i18next": "^6.0.0-6",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
@@ -45,7 +50,10 @@
     "prettier": "^2.8.4",
     "prettier-eslint": "^15.0.1",
     "style-loader": "^3.3.1",
+    "stylelint": "^15.1.0",
     "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-standard": "^30.0.1",
+    "stylelint-prettier": "^2.0.0",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5",
     "webpack": "^5.75.0",

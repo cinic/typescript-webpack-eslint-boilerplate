@@ -3,7 +3,7 @@ import {BrowserRouter} from '@shared/lib/router'
 import {Navbar} from '@widgets/navbar'
 import {Sidebar} from '@widgets/sidebar'
 import {AppRouter} from './providers/router'
-import styles from '@shared/styles/styles.css'
+import styles from '@shared/styles/app.css'
 
 export const Application = () => {
   return (

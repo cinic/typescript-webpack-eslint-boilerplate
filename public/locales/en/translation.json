@@ -2,5 +2,9 @@
   "test": "Test translation",
   "lang": "EN",
   "loading": "Loading...",
-  "toggle": "<=>"
+  "toggle": "<=>",
+  "menu": {
+    "main": "Main",
+    "about": "About"
+  }
 }

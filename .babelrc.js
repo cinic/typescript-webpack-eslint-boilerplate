@@ -9,12 +9,4 @@ module.exports = {
       },
     ],
   ],
-  plugins: [
-    [
-      'i18next-extract',
-      {
-        locales: ['ru', 'en'],
-      },
-    ],
-  ],
 }
