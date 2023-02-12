@@ -4,6 +4,7 @@ import * as model from './model'
 import styles from './styles.css'
 import {Button} from '@shared/ui/button'
 import {ToggleTheme} from '@features/toggle-theme'
+import {ChangeTranslation} from '@features/change-translation'
 
 export const Sidebar = ({className = ''}: {className?: string}) => {
   const {sidebarVisibility} = useUnit({sidebarVisibility: model.$sidebarVisibility})
@@ -19,6 +20,7 @@ export const Sidebar = ({className = ''}: {className?: string}) => {
       </Button>
       <div className={styles.switchers}>
         <ToggleTheme />
+        <ChangeTranslation />
       </div>
     </div>
   )

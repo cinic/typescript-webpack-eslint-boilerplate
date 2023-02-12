@@ -1,5 +1,9 @@
+import {useTranslation} from '@shared/lib/i18n'
+
 export const AboutPage = () => {
-  return <div>About</div>
+  const {t} = useTranslation('about-page')
+
+  return <div>{t('title')}</div>
 }
 
 // Только для отложенной загрузки и использвании в роутинге

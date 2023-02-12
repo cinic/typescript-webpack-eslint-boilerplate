@@ -1,5 +1,6 @@
 .button {
   padding: 0 12px;
+  color: var(--color-primary-inverted);
 }
 
 .icon {
