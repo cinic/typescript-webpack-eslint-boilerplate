@@ -1,4 +1,6 @@
 {
   "test": "Test translation",
-  "lang": "EN"
+  "lang": "EN",
+  "loading": "Loading...",
+  "toggle": "<=>"
 }
