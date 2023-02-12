@@ -44,7 +44,10 @@ module.exports = {
   rules: {
     // semi: ['error', 'never'],
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': 'warn',
+    '@typescript-eslint/no-use-before-define': [
+      'error',
+      {variables: false, typedefs: false, ignoreTypeReferences: true},
+    ],
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error', {argsIgnorePattern: '^_'}],
   },
