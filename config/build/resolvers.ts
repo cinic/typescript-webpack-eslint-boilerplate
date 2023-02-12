@@ -5,13 +5,16 @@ import path from 'path'
 export function buildResolvers(options: BuildOptions): ResolveOptions {
   return {
     extensions: ['.ts', '.tsx', '.js'],
+    preferAbsolute: true,
+    modules: [options.paths.src, 'node_modules'],
     alias: {
       // buffer: 'buffer',
-      '@lib': path.resolve(options.paths.src, 'shared', 'lib'),
-      '@ui': path.resolve(options.paths.src, 'shared', 'ui'),
+      '@app': path.resolve(options.paths.src, 'app'),
+      '@shared': path.resolve(options.paths.src, 'shared'),
       '@entities': path.resolve(options.paths.src, 'entities'),
       '@features': path.resolve(options.paths.src, 'features'),
       '@widgets': path.resolve(options.paths.src, 'widgets'),
+      '@pages': path.resolve(options.paths.src, 'pages'),
     },
   }
 }

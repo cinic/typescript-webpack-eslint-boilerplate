@@ -1,4 +1,4 @@
-import {createEvent, restore, createEffect, sample} from '@lib/state'
+import {createEvent, restore, createEffect, sample} from '@shared/lib/state'
 
 type Theme = 'light' | 'dark'
 const LOCAL_STORAGE_THEME_KEY = 'theme'
@@ -18,6 +18,7 @@ const loadDefaultThemeFx = createEffect(() => {
   return defaultTheme
 })
 const toggleThemeFx = createEffect((theme: Theme) => {
+  localStorage.setItem(LOCAL_STORAGE_THEME_KEY, theme)
   document.documentElement.setAttribute('data-theme', theme)
 })
 

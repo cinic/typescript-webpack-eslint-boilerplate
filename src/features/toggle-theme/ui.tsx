@@ -1,5 +1,5 @@
 import {toggleTheme, $theme} from './model'
-import {useUnit} from '@lib/state'
+import {useUnit} from '@shared/lib/state'
 
 export const ToggleTheme = () => {
   const theme = useUnit($theme)

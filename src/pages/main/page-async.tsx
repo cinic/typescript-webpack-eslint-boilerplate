@@ -6,6 +6,6 @@ export const MainPageAsync = lazy(
       // eslint-disable-next-line
       // @ts-ignore
       // только для курса
-      setTimeout(() => resolve(import('../main')), 1500)
+      setTimeout(() => resolve(import('./page')), 1500)
     }),
 )

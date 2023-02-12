@@ -27,13 +27,14 @@ module.exports = {
       typescript: {},
       alias: {
         map: [
-          ['@lib', path.resolve(__dirname, 'src', 'shared', 'lib')],
-          ['@ui', path.resolve(__dirname, 'src', 'shared', 'ui')],
+          ['@app', path.resolve(__dirname, 'src', 'app')],
+          ['@shared', path.resolve(__dirname, 'src', 'shared')],
           ['@entities', path.resolve(__dirname, 'src', 'entities')],
           ['@features', path.resolve(__dirname, 'src', 'features')],
           ['@widgets', path.resolve(__dirname, 'src', 'widgets')],
+          ['@pages', path.resolve(__dirname, 'src', 'pages')],
         ],
-        extensions: ['.ts', '.js', '.tsx', '.json'],
+        extensions: ['.ts', '.js', '.tsx', '.json', '.css'],
       },
     },
     react: {
@@ -42,6 +43,10 @@ module.exports = {
   },
   rules: {
     // semi: ['error', 'never'],
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': 'warn',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['error', {argsIgnorePattern: '^_'}],
   },
   ignorePatterns: ['**/*.d.ts'],
 }
