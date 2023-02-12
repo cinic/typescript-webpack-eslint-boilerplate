@@ -1,12 +1,11 @@
 import {Suspense} from 'react'
-import {useTranslation} from '@shared/lib/i18n'
 import {Route, Routes} from '@shared/lib/router'
+import {PageLoader} from '@widgets/page-loader'
 import {routerConfig} from '../config'
 
 export const AppRouter = () => {
-  const {t} = useTranslation()
   return (
-    <Suspense fallback={<div>{t('loading')}</div>}>
+    <Suspense fallback={<PageLoader />}>
       <Routes>
         {Object.values(routerConfig).map(({element, path}) => (
           <Route path={path} element={element} key={path} />

@@ -6,5 +6,8 @@
   "menu": {
     "main": "Main",
     "about": "About"
-  }
+  },
+  "notFound": "Page not found",
+  "pageError": "Something went wrong",
+  "reloadPage": "Reload Page"
 }
