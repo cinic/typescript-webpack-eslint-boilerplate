@@ -1,5 +1,5 @@
 import {i18next} from '@shared/lib/i18n'
-import {restore, createEvent, createEffect, sample} from '@shared/lib/state'
+import {createEffect, createEvent, restore, sample} from '@shared/lib/state'
 
 export const changeLanguage = createEvent<string>()
 

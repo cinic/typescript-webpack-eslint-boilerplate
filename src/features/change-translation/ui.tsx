@@ -1,6 +1,6 @@
-import {ButtonIcon} from '@shared/ui/button'
-import {useUnit} from '@shared/lib/state'
 import {useTranslation} from '@shared/lib/i18n'
+import {useUnit} from '@shared/lib/state'
+import {ButtonIcon} from '@shared/ui/button'
 import * as model from './model'
 // import styles from './styles.css'
 

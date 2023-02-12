@@ -1,6 +1,6 @@
+import path from 'path'
 import type {ResolveOptions} from 'webpack'
 import type {BuildOptions} from './types/config'
-import path from 'path'
 
 export function buildResolvers(options: BuildOptions): ResolveOptions {
   return {

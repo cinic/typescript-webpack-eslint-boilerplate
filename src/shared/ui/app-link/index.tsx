@@ -1,8 +1,8 @@
-import {classNames} from '@shared/lib/class-names'
-import styles from './styles.css'
-import {NavLink} from '@shared/lib/router'
-import type {NavLinkProps} from '@shared/lib/router'
 import type {ReactNode} from 'react'
+import {classNames} from '@shared/lib/class-names'
+import type {NavLinkProps} from '@shared/lib/router'
+import {NavLink} from '@shared/lib/router'
+import styles from './styles.css'
 
 export enum AppLinkTheme {
   PRIMARY = 'primary',

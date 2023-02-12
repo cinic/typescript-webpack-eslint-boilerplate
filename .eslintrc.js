@@ -2,6 +2,10 @@
 const path = require('path')
 
 module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+  },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -11,7 +15,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:import/recommended',
   ],
-  plugins: ['react', 'react-hooks', '@typescript-eslint'],
+  plugins: ['react', 'react-hooks', '@typescript-eslint', 'simple-import-sort'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: ['./tsconfig.json', './tsconfig.eslint.json'],
@@ -43,6 +47,33 @@ module.exports = {
   },
   rules: {
     // semi: ['error', 'never'],
+    'simple-import-sort/imports': [
+      'error',
+      {
+        groups: [
+          // Packages. `react` related packages come first.
+          [
+            '^react',
+            '^@?\\w',
+            // Internal packages.
+            '^(@|@company|@ui|components|utils|config|vendored-lib)(/.*|$)',
+            // Side effect imports.
+            '^\\u0000',
+            // Parent imports. Put `..` last.
+            '^\\.\\.(?!/?$)',
+            '^\\.\\./?$',
+            // Other relative imports. Put same-folder imports and `.` last.
+            '^\\./(?=.*/)(?!/?$)',
+            '^\\.(?!/?$)',
+            '^\\./?$',
+            // Style imports.
+            '^.+\\.s?css$',
+          ],
+        ],
+      },
+    ],
+    'simple-import-sort/exports': 'error',
+    'import/first': 'error',
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': [
       'error',

@@ -1,7 +1,7 @@
-import {toggleTheme, $theme} from './model'
 import {useUnit} from '@shared/lib/state'
-import styles from './styles.css'
 import {ButtonIcon} from '@shared/ui/button'
+import {$theme, toggleTheme} from './model'
+import styles from './styles.css'
 
 export const ToggleTheme = () => {
   const theme = useUnit($theme)
@@ -11,7 +11,7 @@ export const ToggleTheme = () => {
       className={styles.themeSwitcher}
       type="button"
       role="switch"
-      aria-label="toggle theme"
+      aria-label="toggle-theme"
       aria-checked={theme === 'dark'}
       data-theme={theme}
       onClick={() => toggleTheme(theme === 'dark' ? 'light' : 'dark')}

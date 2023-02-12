@@ -1,4 +1,4 @@
-import {createEvent, restore, createEffect, sample} from '@shared/lib/state'
+import {createEffect, createEvent, restore, sample} from '@shared/lib/state'
 
 type Theme = 'light' | 'dark'
 const LOCAL_STORAGE_THEME_KEY = 'theme'

@@ -1,4 +1,4 @@
-import {i18next, initReactI18next, i18nextBackend, i18nextLanguageDetector} from '../lib/i18n'
+import {i18next, i18nextBackend, i18nextLanguageDetector, initReactI18next} from '../lib/i18n'
 
 export default i18next
   .use(i18nextBackend)

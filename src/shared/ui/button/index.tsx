@@ -1,5 +1,5 @@
-import styles from './styles.css'
 import type {ButtonHTMLAttributes, ReactNode} from 'react'
+import styles from './styles.css'
 
 export const Button = ({children, className = '', ...props}: Props) => {
   return (

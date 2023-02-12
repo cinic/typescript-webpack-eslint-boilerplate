@@ -1,7 +1,7 @@
-import type {RouteProps} from '@shared/lib/router'
-import {AppRoutes, RoutePath} from '@shared/config/router-config'
-import {MainPage} from '@pages/main'
 import {AboutPage} from '@pages/about'
+import {MainPage} from '@pages/main'
+import {AppRoutes, RoutePath} from '@shared/config/router-config'
+import type {RouteProps} from '@shared/lib/router'
 
 export const routerConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.MAIN]: {

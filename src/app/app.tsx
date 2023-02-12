@@ -1,9 +1,9 @@
-import styles from '@shared/styles/styles.css'
+import {Suspense} from 'react'
 import {BrowserRouter} from '@shared/lib/router'
-import {AppRouter} from './providers/router'
 import {Navbar} from '@widgets/navbar'
 import {Sidebar} from '@widgets/sidebar'
-import {Suspense} from 'react'
+import {AppRouter} from './providers/router'
+import styles from '@shared/styles/styles.css'
 
 export const Application = () => {
   return (
