@@ -12,8 +12,13 @@ export const Sidebar = ({className = ''}: {className?: string}) => {
   const {t} = useTranslation()
 
   return (
-    <div className={classNames([styles.sidebar, className])} data-visibility={sidebarVisibility}>
+    <div
+      data-testid="sidebar"
+      className={classNames([styles.sidebar, className])}
+      data-visibility={sidebarVisibility}
+    >
       <Button
+        data-testid="sidebar-toggle-button"
         onClick={() =>
           model.toggleVisibility(sidebarVisibility === 'collapsed' ? 'visible' : 'collapsed')
         }

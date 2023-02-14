@@ -3,6 +3,7 @@
   "include": [
     ".eslintrc.js",
     ".babelrc.js",
-    "postcss.config.js"
+    "postcss.config.js",
+    "config"
   ]
 }

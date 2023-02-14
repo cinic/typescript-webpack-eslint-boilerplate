@@ -16,8 +16,18 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:import/recommended',
     'plugin:i18next/recommended',
+    'plugin:jest-dom/recommended',
+    'plugin:testing-library/react',
   ],
-  plugins: ['react', 'react-hooks', '@typescript-eslint', 'simple-import-sort', 'i18next'],
+  plugins: [
+    'react',
+    'react-hooks',
+    '@typescript-eslint',
+    'simple-import-sort',
+    'i18next',
+    'jest-dom',
+    'testing-library',
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: ['./tsconfig.json', './tsconfig.eslint.json'],
@@ -83,7 +93,10 @@ module.exports = {
     ],
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error', {argsIgnorePattern: '^_'}],
-    'i18next/no-literal-string': ['error', {mode: 'jsx-text-only'}],
+    'i18next/no-literal-string': [
+      'error',
+      {mode: 'jsx-text-only', exclude: ['**/?(*.)+(spec|test).[tj]s?(x)']},
+    ],
   },
   ignorePatterns: ['**/*.d.ts'],
 }

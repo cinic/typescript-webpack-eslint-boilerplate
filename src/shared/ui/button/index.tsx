@@ -3,7 +3,7 @@ import styles from './styles.css'
 
 export const Button = ({children, className = '', ...props}: Props) => {
   return (
-    <button className={`${styles.button} ${className}`} {...props}>
+    <button data-testid="button" className={`${styles.button} ${className}`} {...props}>
       {children}
     </button>
   )
@@ -11,7 +11,7 @@ export const Button = ({children, className = '', ...props}: Props) => {
 
 export const ButtonIcon = ({children, className = '', ...props}: Props) => {
   return (
-    <Button className={`${styles.icon} ${className}`} {...props}>
+    <Button className={`${styles.icon} ${className}`} {...props} data-testid="button-icon">
       {children}
     </Button>
   )
