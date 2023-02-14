@@ -93,10 +93,15 @@ module.exports = {
     ],
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error', {argsIgnorePattern: '^_'}],
-    'i18next/no-literal-string': [
-      'error',
-      {mode: 'jsx-text-only', exclude: ['**/?(*.)+(spec|test).[tj]s?(x)']},
-    ],
+    'i18next/no-literal-string': ['error', {mode: 'jsx-text-only'}],
   },
   ignorePatterns: ['**/*.d.ts'],
+  overrides: [
+    {
+      files: ['**/?(*.)+(spec|test).ts?(x)'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
+  ],
 }
