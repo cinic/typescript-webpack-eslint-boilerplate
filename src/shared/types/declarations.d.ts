@@ -5,3 +5,4 @@ declare module '*.css' {
   const classNames: ClassNames;
   export = classNames;
 }
+declare module 'storybook-addon-themes/react'

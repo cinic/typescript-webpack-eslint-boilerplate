@@ -1,6 +1,6 @@
 import {classNames} from '@shared/lib/class-names'
 import {useTranslation} from '@shared/lib/i18n'
-import {Button} from '@shared/ui/button'
+import {ButtonPrimary} from '@shared/ui/button'
 import styles from './styles.css'
 
 export const PageError = ({className = ''}: {className?: string}) => {
@@ -9,7 +9,7 @@ export const PageError = ({className = ''}: {className?: string}) => {
   return (
     <div className={classNames([styles.page, className])}>
       <p>{t('pageError')}</p>
-      <Button onClick={() => location.reload()}>{t('reloadPage')}</Button>
+      <ButtonPrimary onClick={() => location.reload()}>{t('reloadPage')}</ButtonPrimary>
     </div>
   )
 }

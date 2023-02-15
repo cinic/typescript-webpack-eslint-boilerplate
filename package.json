@@ -14,7 +14,9 @@
     "lint:fix": "eslint --fix --ext .js,.ts,.tsx ./src",
     "stylelint": "npx stylelint \"src/**/*.css\"",
     "stylelint:fix": "stylelint --fix \"src/**/*.css\"",
-    "test:unit": "jest --config ./config/test/jest.config.ts"
+    "test:unit": "jest --config ./config/test/jest.config.ts",
+    "storybook": "start-storybook -p 6006 -c ./config/storybook",
+    "build-storybook": "build-storybook -c ./config/storybook"
   },
   "devDependencies": {
     "@babel/cli": "^7.20.7",
@@ -22,6 +24,14 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.4.0",
@@ -30,7 +40,6 @@
     "@types/react-dom": "^18.0.10",
     "@types/webpack": "^5.28.0",
     "@types/webpack-bundle-analyzer": "^4.6.0",
-    "@types/webpack-dev-server": "^4.7.2",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.51.0",
     "babel-loader": "^9.1.2",
@@ -48,6 +57,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-storybook": "^0.6.10",
     "eslint-plugin-testing-library": "^5.10.1",
     "html-webpack-plugin": "^5.5.0",
     "identity-obj-proxy": "^3.0.0",
@@ -61,7 +71,6 @@
     "prettier-eslint": "^15.0.1",
     "style-loader": "^3.3.1",
     "stylelint": "^15.1.0",
-    "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-standard": "^30.0.1",
     "stylelint-prettier": "^2.0.0",
     "ts-node": "^10.9.1",
@@ -81,5 +90,8 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^12.1.5",
     "react-router-dom": "^6.8.1"
+  },
+  "overrides": {
+    "@storybook/react-docgen-typescript-plugin": "npm:react-docgen-typescript-plugin@1.0.5"
   }
 }

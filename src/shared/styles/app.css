@@ -3,7 +3,8 @@
 @import url('./theme.dark.css');
 @import url('./theme.light.css');
 
-.app {
+.app,
+body {
   font: var(--font-m);
   background: var(--color-background);
   color: var(--color-primary);

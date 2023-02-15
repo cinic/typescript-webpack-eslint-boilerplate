@@ -1,4 +1,4 @@
-[data-theme='light'] {
+:root [data-theme='light'] {
   --color-background: #fff;
   --color-background-inverted: #052640;
   --color-primary: #244165;

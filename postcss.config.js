@@ -3,7 +3,9 @@ module.exports = {
     [
       'postcss-preset-env',
       {
-        // Options
+        features: {
+          'nesting-rules': true,
+        },
       },
     ],
   ],

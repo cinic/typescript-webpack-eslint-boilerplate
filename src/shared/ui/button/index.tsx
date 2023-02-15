@@ -17,4 +17,12 @@ export const ButtonIcon = ({children, className = '', ...props}: Props) => {
   )
 }
 
+export const ButtonPrimary = ({children, className = '', ...props}: Props) => {
+  return (
+    <Button className={`${styles.primary} ${className}`} {...props} data-testid="button-primary">
+      {children}
+    </Button>
+  )
+}
+
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {className?: string; children?: ReactNode}

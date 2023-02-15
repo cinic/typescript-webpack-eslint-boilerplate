@@ -1,6 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path')
-
 module.exports = {
   env: {
     browser: true,
@@ -18,6 +17,7 @@ module.exports = {
     'plugin:i18next/recommended',
     'plugin:jest-dom/recommended',
     'plugin:testing-library/react',
+    'plugin:storybook/recommended',
   ],
   plugins: [
     'react',
@@ -89,11 +89,29 @@ module.exports = {
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': [
       'error',
-      {variables: false, typedefs: false, ignoreTypeReferences: true},
+      {
+        variables: false,
+        typedefs: false,
+        ignoreTypeReferences: true,
+      },
     ],
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': ['error', {argsIgnorePattern: '^_'}],
-    'i18next/no-literal-string': ['error', {mode: 'jsx-text-only'}],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+      },
+    ],
+    'i18next/no-literal-string': [
+      'error',
+      {
+        mode: 'jsx-text-only',
+        'object-properties': {
+          exclude: ['[A-Z_-]+'],
+        },
+      },
+    ],
+    'react/display-name': 'off',
   },
   ignorePatterns: ['**/*.d.ts'],
   overrides: [

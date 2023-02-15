@@ -1,6 +1,6 @@
 import {createEffect, createEvent, restore, sample} from '@shared/lib/state'
 
-type Theme = 'light' | 'dark'
+export type Theme = 'light' | 'dark'
 const LOCAL_STORAGE_THEME_KEY = 'theme'
 
 const loadDefaultTheme = createEvent()
