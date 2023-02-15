@@ -36,9 +36,10 @@ const config: StorybookConfig = {
     builder: 'webpack5',
     disableTelemetry: true,
   },
-  features: {
-    storyStoreV7: true,
-  },
+  // Закоментировано для нормальной работы Loki тестов
+  // features: {
+  //   storyStoreV7: true,
+  // },
   typescript: {
     check: false,
     checkOptions: {},
