@@ -29,6 +29,10 @@ jobs:
         run: npm run stylelint
       - name: unit tests
         run: npm run test:unit
+      - name: build storybook
+        run: npm run storybook:build
+      - name: screenshot tests
+        run: npm run test:ui:ci
 #    steps:
 #      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
 #      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
