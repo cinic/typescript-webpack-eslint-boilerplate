@@ -17,10 +17,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: install modules
-        run: npm install
       - name: install modules with legacy-peer-deps
         run: npm install --legacy-peer-deps
+      - name: install modules
+        run: npm install
       - name: build production project
         run: npm run build:prod
       - name: lint typescript
