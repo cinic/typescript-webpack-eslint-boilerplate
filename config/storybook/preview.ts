@@ -1,6 +1,7 @@
 import {RouterDecorator} from '@shared/config/storybook/router-decorator'
 import {StyleDecorator} from '@shared/config/storybook/style-decorator'
 import {ThemeDecorator} from '@shared/config/storybook/theme-decorator'
+import 'loki/configure-react'
 
 export const parameters = {
   actions: {argTypesRegex: '^on[A-Z].*'},
