@@ -107,10 +107,6 @@
         "deviceScaleFactor": 1,
         "mobile": false
       }
-    },
-    "looks-same": {
-      "ignoreCaret": true,
-      "ignoreAntialiasing": true
     }
   }
 }

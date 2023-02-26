@@ -1,8 +1,9 @@
-:root [data-theme='dark'] {
+[data-theme='dark'] {
   --color-background: #052640;
   --color-background-inverted: #fff;
   --color-primary: #fff;
   --color-secondary: #97aaba;
   --color-primary-inverted: #244165;
   --color-secondary-inverted: #1367c5;
+  --color-sidebar-background: #154d74;
 }

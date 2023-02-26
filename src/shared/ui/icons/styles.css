@@ -2,8 +2,26 @@
   display: block;
   width: 24px;
   height: 24px;
+  flex-shrink: 0;
+}
+
+.icon path {
+  fill: var(--color-primary);
 }
 
 [data-theme='dark'] .icon {
   fill: var(--color-primary)
+}
+
+.arrow {
+  fill: none;
+}
+
+.arrow path {
+  stroke: var(--color-primary);
+  fill: none;
+}
+
+[data-theme='dark'] .arrow {
+  fill: none;
 }
