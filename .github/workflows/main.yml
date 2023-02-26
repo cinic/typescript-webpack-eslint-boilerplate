@@ -22,16 +22,22 @@ jobs:
       - name: install modules
         run: npm install
       - name: build production project
+        if: always()
         run: npm run build:prod
       - name: lint typescript
+        if: always()
         run: npm run lint
       - name: lint styles
+        if: always()
         run: npm run stylelint
       - name: unit tests
+        if: always()
         run: npm run test:unit
       - name: build storybook
+        if: always()
         run: npm run storybook:build
       - name: screenshot tests
+        if: always()
         run: npm run test:ui:ci
 #    steps:
 #      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."

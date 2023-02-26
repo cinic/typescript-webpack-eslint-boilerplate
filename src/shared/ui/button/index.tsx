@@ -11,7 +11,7 @@ export const Button = ({children, className = '', ...props}: Props) => {
 
 export const ButtonIcon = ({children, className = '', ...props}: Props) => {
   return (
-    <Button className={`${styles.icon} ${className}`} {...props} data-testid="button-icon">
+    <Button data-testid="button-icon" className={`${styles.icon} ${className}`} {...props}>
       {children}
     </Button>
   )
@@ -19,7 +19,7 @@ export const ButtonIcon = ({children, className = '', ...props}: Props) => {
 
 export const ButtonPrimary = ({children, className = '', ...props}: Props) => {
   return (
-    <Button className={`${styles.primary} ${className}`} {...props} data-testid="button-primary">
+    <Button data-testid="button-primary" className={`${styles.primary} ${className}`} {...props}>
       {children}
     </Button>
   )
