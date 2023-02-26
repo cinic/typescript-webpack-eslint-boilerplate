@@ -3,3 +3,4 @@
 .idea
 coverage
 /storybook-static
+.loki/report.*
