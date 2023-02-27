@@ -112,11 +112,13 @@ module.exports = {
       },
     ],
     'react/display-name': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
   },
   ignorePatterns: ['**/*.d.ts'],
   overrides: [
     {
-      files: ['**/?(*.)+(spec|test).ts?(x)'],
+      files: ['**/?(*.)+(spec|test|stories).ts?(x)'],
       rules: {
         'i18next/no-literal-string': 'off',
       },

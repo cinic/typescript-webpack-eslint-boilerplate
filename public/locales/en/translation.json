@@ -9,5 +9,7 @@
   },
   "notFound": "Page not found",
   "pageError": "Something went wrong",
-  "reloadPage": "Reload Page"
+  "reloadPage": "Reload Page",
+  "close": "Close",
+  "login": "Login"
 }

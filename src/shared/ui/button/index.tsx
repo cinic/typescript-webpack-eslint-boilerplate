@@ -1,4 +1,5 @@
 import type {ButtonHTMLAttributes, ReactNode} from 'react'
+import {Cross} from '@shared/ui/icons'
 import styles from './styles.css'
 
 export const Button = ({children, className = '', ...props}: Props) => {
@@ -24,5 +25,17 @@ export const ButtonPrimary = ({children, className = '', ...props}: Props) => {
     </Button>
   )
 }
+
+export const ButtonIconBase = ({children, className = '', ...props}: Props) => (
+  <button type="button" className={`${styles.buttonIcon} ${className}`} {...props}>
+    {children}
+  </button>
+)
+
+export const ButtonClose = (props: Props) => (
+  <ButtonIconBase {...props}>
+    <Cross />
+  </ButtonIconBase>
+)
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {className?: string; children?: ReactNode}

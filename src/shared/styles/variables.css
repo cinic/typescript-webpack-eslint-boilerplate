@@ -1,4 +1,5 @@
 :root {
+  /* Шрифты */
   --font-family-main: -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, ubuntu, cantarell,
     sans-serif;
   --font-size-m: 16px;
@@ -7,7 +8,15 @@
   --font-size-l: 24px;
   --font-line-l: 32px;
   --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+
+  /* Размеры */
   --navbar-height: 50px;
   --sidebar-width: 300px;
   --sidebar-width-collapsed: 80px;
+
+  /* Z индексы */
+  --modal-z-index: 200;
+
+  /* Цвета */
+  --overlay-color: rgb(0 24 44 / 70%);
 }
