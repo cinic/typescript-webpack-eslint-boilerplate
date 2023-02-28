@@ -108,6 +108,7 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
     "typeRoots": ["node_modules/@types", "src/shared/types"]
   },
+  "include": ["src"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"

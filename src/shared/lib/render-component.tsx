@@ -4,7 +4,9 @@ import {I18nextProvider} from '@shared/lib/i18n'
 import {render} from '@testing-library/react'
 import {MemoryRouter} from './router'
 
-export async function renderComponent(component: ReactNode, options: RouterOptions = {route: '/'}) {
+// eslint-disable-next-line
+// @ts-ignore
+export async function renderComponent(component: ReactNode, options: Options = {route: '/'}) {
   const {route} = options
 
   return render(
@@ -14,6 +16,6 @@ export async function renderComponent(component: ReactNode, options: RouterOptio
   )
 }
 
-type RouterOptions = {
+type Options = {
   route: string
 }

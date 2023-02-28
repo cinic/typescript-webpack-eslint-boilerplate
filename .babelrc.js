@@ -9,4 +9,14 @@ module.exports = {
       },
     ],
   ],
+  plugins: [
+    [
+      'effector/babel-plugin',
+      {
+        importName: '@shared/lib/state',
+        addLoc: true,
+        addNames: true,
+      },
+    ],
+  ]
 }
