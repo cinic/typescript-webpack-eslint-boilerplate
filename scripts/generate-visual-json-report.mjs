@@ -1,7 +1,7 @@
 import {readdir, writeFile} from 'fs'
 import {join as joinPath, relative, dirname} from 'path'
 import {promisify} from 'util'
-import { fileURLToPath } from "url";
+import {fileURLToPath} from 'url'
 
 const asyncReaddir = promisify(readdir)
 const writeFileAsync = promisify(writeFile)

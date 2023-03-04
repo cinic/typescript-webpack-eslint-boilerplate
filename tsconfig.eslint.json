@@ -4,6 +4,7 @@
     ".eslintrc.js",
     ".babelrc.js",
     "postcss.config.js",
-    "config"
+    "config",
+    "json-server"
   ]
 }
