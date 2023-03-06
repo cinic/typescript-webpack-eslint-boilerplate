@@ -42,6 +42,8 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.4.0",
+    "@types/json-server": "^0.14.4",
+    "@types/jsonwebtoken": "^9.0.1",
     "@types/node": "^18.14.2",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
@@ -99,6 +101,7 @@
     "i18next-http-backend": "^2.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-focus-lock": "^2.9.4",
     "react-i18next": "^12.2.0",
     "react-router-dom": "^6.8.2"
   },

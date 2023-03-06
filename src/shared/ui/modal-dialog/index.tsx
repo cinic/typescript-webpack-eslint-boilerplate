@@ -1,5 +1,6 @@
 import type {ReactNode} from 'react'
 import {useCallback, useEffect, useRef, useState} from 'react'
+import ReactFocusLock from 'react-focus-lock'
 import {useTranslation} from '@shared/lib/i18n'
 import {ButtonClose, ButtonPrimary} from '@shared/ui/button'
 import {Portal} from '@shared/ui/modal-dialog/portal'
@@ -22,7 +23,6 @@ export const ModalDialog = ({
   const [animationState, changeAnimationState] = useState<'inProgress' | 'isDone'>(
     variant === 'static' ? 'isDone' : 'inProgress',
   )
-  const dialogRef = useRef<HTMLDivElement>(null)
   const closingTimer = useRef<ReturnType<typeof setTimeout>>()
 
   const _onClose = useCallback(() => {
@@ -53,35 +53,35 @@ export const ModalDialog = ({
     }
   }, [_onClose, variant])
 
-  useEffect(() => {
-    dialogRef.current?.focus()
-  })
-
   return (
     <Portal>
-      <div ref={dialogRef} className={styles.dialog} role="dialog" tabIndex={-1}>
-        <div
-          className={`${styles.modalDialog} ${className}`}
-          data-animation={animationState}
-          role="document"
-        >
-          <header className={`${styles.header} ${headerClassName}`}>
-            <div>
-              <Title>{title}</Title>
+      <ReactFocusLock returnFocus persistentFocus>
+        <div className={styles.dialog} role="dialog" tabIndex={-1}>
+          <div
+            className={`${styles.modalDialog} ${className}`}
+            data-animation={animationState}
+            role="document"
+          >
+            <header className={`${styles.header} ${headerClassName}`}>
+              <div>
+                <Title>{title}</Title>
+              </div>
+              <div className={styles.close}>
+                <ButtonClose onClick={_onClose} />
+              </div>
+            </header>
+            <div className={`${styles.content} ${contentClassName}`} tabIndex={0} role="region">
+              {children}
             </div>
-            <div className={styles.close}>
-              <ButtonClose onClick={_onClose} />
-            </div>
-          </header>
-          <div className={`${styles.content} ${contentClassName}`} tabIndex={0} role="region">
-            {children}
+            <Actions className={actionsClassName}>
+              {actions || (
+                <ButtonPrimary onClick={_onClose}>{t('translation:close')}</ButtonPrimary>
+              )}
+            </Actions>
           </div>
-          <Actions className={actionsClassName}>
-            {actions || <ButtonPrimary onClick={_onClose}>{t('translation:close')}</ButtonPrimary>}
-          </Actions>
+          <div className={styles.overlay} onClick={_onClose} />
         </div>
-        <div className={styles.overlay} onClick={_onClose} />
-      </div>
+      </ReactFocusLock>
     </Portal>
   )
 }

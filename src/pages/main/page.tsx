@@ -1,5 +1,6 @@
 import {Counter} from '@entities/counter'
 import {useTranslation} from '@shared/lib/i18n'
+import {FieldText} from '@shared/ui/field-text'
 
 export const MainPage = () => {
   const {t} = useTranslation('main')
@@ -8,6 +9,7 @@ export const MainPage = () => {
     <div>
       {t('title')}
       <Counter />
+      <FieldText autoFocus placeholder="Olo" />
     </div>
   )
 }

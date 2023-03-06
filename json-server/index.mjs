@@ -1,10 +1,8 @@
 import {readFileSync} from 'fs'
 import jsonServer from 'json-server'
 import jwt from 'jsonwebtoken'
-import { resolve, dirname } from 'path'
-
+import {dirname, resolve} from 'path'
 import {fileURLToPath} from 'url'
-
 
 const _dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -12,7 +10,7 @@ const server = jsonServer.create()
 const router = jsonServer.router(resolve(_dirname, 'db.json'))
 
 server.use(async (req, res, next) => {
-  await new Promise((resolve, reject) => {
+  await new Promise((resolve) => {
     setTimeout(resolve, 800)
   })
 

@@ -11,5 +11,6 @@
   "pageError": "Something went wrong",
   "reloadPage": "Reload Page",
   "close": "Close",
-  "login": "Login"
+  "login": "Login",
+  "authorization": "Authorization"
 }

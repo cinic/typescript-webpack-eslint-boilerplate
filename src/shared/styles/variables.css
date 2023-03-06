@@ -19,4 +19,7 @@
 
   /* Цвета */
   --overlay-color: rgb(0 24 44 / 70%);
+
+  /* Радиусы */
+  --default-border-radius: 4px;
 }

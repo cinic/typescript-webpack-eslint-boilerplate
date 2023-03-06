@@ -1,0 +1,9 @@
+.authForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+.actions {
+  text-align: center;
+}
